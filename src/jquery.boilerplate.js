@@ -19,6 +19,10 @@
 
 		// The actual plugin constructor
 		function Plugin ( element, options ) {
+				// Attach a callable function thru data method
+				// This can be called using $(element).data(pluginName).yourFunction();
+				$(element).data(pluginName, this);
+				
 				this.element = element;
 				// jQuery has an extend method which merges the contents of two or
 				// more objects, storing the result in the first object. The first object
